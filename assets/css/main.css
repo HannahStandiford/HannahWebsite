@@ -19,22 +19,22 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #EFE5DF; /* Background color for the entire website, including individual sections */
+  --background-color: #FFDEE7; /* Background color for the entire website, including individual sections */
   --default-color: #180D08; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #000000; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #EC783E; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #800020; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #EBE0D9; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #000000; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #000000;  /* The default color of the main navmenu links */
-  --nav-hover-color: #EC783E; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #DEC9BD; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #FAEEE8; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #180D08; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #EC783E; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: var(--heading-color);  /* The default color of the main navmenu links */
+  --nav-hover-color: var(--accent-color); /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: var(--background-color); /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: var(--background-color); /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: var(--heading-color); /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: var(--accent-color); /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -87,57 +87,6 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
-
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 /*--------------------------------------------------------------
 # Global Header
@@ -205,7 +154,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(16, 26, 32, 0.9);
+  --background-color: var(--nav-dropdown-background-color);
 }
 
 /*--------------------------------------------------------------
